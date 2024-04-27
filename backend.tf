@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     bucket = "brinda-statefile"
     key = "main"
-    region = "us-east-1"
+    region = "eu-north-1"
     dynamodb_table = "brinda-dynamoDBtable"
   }
 }
