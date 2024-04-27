@@ -3,6 +3,6 @@ terraform {
     bucket = "brinda-statefile"
     key = "main"
     region = "us-east-1"
-    dynamodb_table = "hashtekTerraformStateLock"
+    dynamodb_table = "brinda-dynamoDBtable"
   }
 }
