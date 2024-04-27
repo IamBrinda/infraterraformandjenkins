@@ -21,7 +21,7 @@ pipeline {
                 
         stage ("terraform Action") {
             steps {
-                sh ('terraform apply "tfplan"')
+                sh terraform apply "tfplan"
            }
         }
     }
