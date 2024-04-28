@@ -1,11 +1,11 @@
 variable "aws_region" {
        description = "The AWS region to create things in." 
-       default     = "us-east-1" 
+       default     = "ap-south-1" 
 }
 
 variable "key_name" { 
     description = " SSH keys to connect to ec2 instance" 
-    default     =  "ec2-keypair" 
+    default     =  "jenkinsterraform" 
 }
 
 variable "instance_type" { 
@@ -24,7 +24,7 @@ variable "tag_name" {
 } 
 variable "ami_id" { 
     description = "AMI for Ubuntu Ec2 instance" 
-    default     = "ami-0705384c0b33c194c"
+    default     = "ami-03f4878755434977f" 
 }
 variable "versioning" {
     type        = bool
@@ -33,7 +33,7 @@ variable "versioning" {
 }
 variable "acl" {
     type        = string
-    description = "Defaults to private "
+    description = " Defaults to private "
     default     = "private"
 }
 variable "bucket_prefix" {
