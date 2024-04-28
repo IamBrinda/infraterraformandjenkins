@@ -3,6 +3,6 @@ terraform {
     bucket = "brinda-s3statefile"
     key = "main"
     region = "ap-south-1"
-    dynamodb_table = "terraformstatelock"
+    dynamodb_table = "brinda-dbtable"
   }
 }
