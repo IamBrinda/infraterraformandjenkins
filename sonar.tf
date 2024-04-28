@@ -1,6 +1,6 @@
 
 resource "aws_instance" "mySonarInstance" {
-      ami           = "ami-0e670eb768a5fc3d4"
+      ami           = "ami-001843b876406202a"
       key_name = var.key_name
       instance_type = "t2.micro"
       vpc_security_group_ids = [aws_security_group.sonar-sg-2022.id]
