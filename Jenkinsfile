@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/IamBrinda/infraterraformandjenkins.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/hymabudi/infraterraform.git']]])
              }
         }
         
@@ -15,13 +15,14 @@ pipeline {
         }
         stage ("terraform plan") {
             steps {
-                sh ('terraform plan -out=tfplan')
+                sh ('terraform plan -no-color') 
             }
         }
                 
         stage ("terraform Action") {
             steps {
-                terraform apply "tfplan"
+                echo "Terraform action is --> ${action}"
+                sh ('terraform ${action} --auto-approve -no-color')
            }
         }
     }
