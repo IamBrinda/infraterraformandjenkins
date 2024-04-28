@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "brinda-statefile"
+    bucket = "terraform-jenkins-statebucket"
     key = "main"
-    region = "eu-north-1"
-    dynamodb_table = "brinda-dynamoDBtable"
+    region = "ap-south-1"
+    dynamodb_table = "terraformstatelock"
   }
 }
